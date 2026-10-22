@@ -14,6 +14,24 @@ The ERD below models the data structure of the Manage Time use case. It shows th
 
 ## Flowchart
 
+### Simplified Flowcharts
+
+The following two diagrams are simplified, role-specific views of the main flowchart below, isolating each actor's perspective for easier readability.
+
+#### Employee Flow
+
+The Employee Flow focuses on the employee's journey: selecting VTS from the portal, viewing vacation balances, choosing a vacation type and filling the form, submitting the request, handling validation errors, and — if approval is required — notifying the manager by email before saving the request to the database.
+
+![Simplified flowchart — Employee Flow](diagrams/manageTime_useCase_EmployeeFlow.drawio.png)
+
+#### Manager Flow
+
+The Manager Flow focuses on the manager's journey: receiving the leave-request email notification, logging in, deciding to approve or reject (with an explanation on rejection), saving the decision and status to the database, and notifying the employee by email.
+
+![Simplified flowchart — Manager Flow](diagrams/manageTime_useCase_ManagerFlow.drawio.png)
+
+### Complete Flowchart
+
 The flowchart below illustrates the complete workflow of the Manage Time use case across three swimlanes — Employee, VTS, and Manager. It covers the employee selecting a vacation type with a positive balance, entering and submitting request details, the system validating the data (with errors highlighted for correction or cancellation), and the manager reviewing, approving, or rejecting the request, including email notifications and post-decision navigation.
 
 ![Flowchart of the VTS Manage Time use case workflow](diagrams/Flowchart_VTS_ManageTime_useCase.png)

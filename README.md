@@ -93,7 +93,7 @@ ASM-01: An HR clerk who is also an employee has two separate login IDs, one per 
 - **Employee**: Requests and tracks their own leave.
 - **Manager**: Approves or rejects subordinates' requests; may award personal leave within system limits.
 - **HR Clerk**: HR department member responsible for keeping employee data accurate and up to date across HR systems. Can view employees' personal data and add, update, or remove vacation records and balances.
-- **System Admin**: Technical role responsible for running the system's technical resources (web server, database) Systems Logs.
+- **System Admin**: Technical role responsible for running the system's technical resources (web server, database) and Backup Systems Logs.
 
 ---
 
