@@ -6,7 +6,7 @@ This folder contains the design artifacts for the **Manage Time** use case of th
 
 ## Entity Relationship Diagram (ERD)
 
-The ERD below models the data structure of the Manage Time use case. It shows the core entities — Employee, VacationRequest, VacationRequestDay, VacationCategory, VacationBalance, ApprovalDecision, and Calendar — along with their attributes and the relationships between them (e.g., an Employee *submits* VacationRequests, a Manager *decides* on them via ApprovalDecision, and each request *contains* one or more VacationRequestDays).
+The ERD below models the data structure of the Manage Time use case. It shows the core entities — Employee, VacationRequest, VacationRequestDay, VacationCategory, VacationBalance, ApprovalDecision, and Calendar — along with their attributes and the relationships between them (e.g., an Employee _submits_ VacationRequests, a Manager _decides_ on them via ApprovalDecision, and each request _contains_ one or more VacationRequestDays).
 
 ![Entity Relationship Diagram for the VTS Manage Time use case](diagrams/ERD_VTS_ManageTime_usecase.png)
 
@@ -43,11 +43,3 @@ The flowchart below illustrates the complete workflow of the Manage Time use cas
 The sequence diagram below details the message flow over time between the Employee, Manager, Intranet Portal, VTS, and Email Notification components. It shows the employee opening VTS via the intranet portal, submitting a vacation request, the alternative paths for data validation (valid vs. invalid/incomplete data), whether manager approval is required, the manager's credential check, the approve/disapprove decision, and the resulting email notification to the employee.
 
 ![Sequence diagram for the VTS time management use case](diagrams/sequenceDiagram_VTS_timeManagement_usecase.png)
-
----
-
-## State Machine Diagram
-
-The state machine below shows the lifecycle of a vacation request. A valid request goes directly to **Approved** when no manager approval is required, or to **Pending Approval** with an email sent to the manager otherwise. From there, the manager's decision moves it to **Approved** (emailing the employee) or to **Rejected** — which requires an explanation — before the request reaches its final state.
-
-![State machine diagram of the vacation request lifecycle](diagrams/StateMachine_VacationRequest.drawio.png)
